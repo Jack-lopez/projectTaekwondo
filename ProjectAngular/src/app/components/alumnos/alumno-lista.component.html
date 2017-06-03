@@ -1,0 +1,44 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Apellido paterno</th>
+      <th>Apellido materno</th>
+      <th>Nombre</th>
+      <th>Sexo</th>
+      <th>Fecha de nac.</th>
+      <th>CURP</th>
+      <th>Domicilio</th>
+      <th>Colonia</th>
+      <th>Ciudad</th>
+      <th>Estado</th>
+      <th>C.P.</th>
+      <th>Teléfono</th>
+      <th>Email</th>
+      <th>RFC</th>
+      <th>Escolaridad</th>
+      <th>Tipo de registro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let alumno of alumnos'>
+      <th scope="row">1</th>
+      <td>{{ alumno.apellidoPaterno }}</td>
+      <td>{{ alumno.apellidoMaterno }}</td>
+      <td>{{ alumno.nombre }}</td>
+      <td>{{ alumno.sexo }}</td>
+      <td>{{ alumno.fechaNacimiento }}</td>
+      <td>{{ alumno.curp }}</td>
+      <td>{{ alumno.domicilio }}</td>
+      <td>{{ alumno.colonia }}</td>
+      <td>{{ alumno.ciudad }}</td>
+      <td>{{ alumno.estado }}</td>
+      <td>{{ alumno.codigoPostal }}</td>
+      <td>{{ alumno.telefono }}</td>
+      <td>{{ alumno.email }}</td>
+      <td>{{ alumno.rfc }}</td>
+      <td>{{ alumno.escolaridad }}</td>
+      <td>{{ alumno.tipoRegistro }}</td>
+    </tr>
+  </tbody>
+</table>

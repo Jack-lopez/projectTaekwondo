@@ -1,0 +1,57 @@
+
+  <div class="container">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+          contactanos
+       </div>
+       <div class="panel-body">
+         <form  #form="ngForm">
+           <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre"
+                name="nombre" ngModel #nombre="ngModel" required #spy >
+
+           </div>
+           <div *ngIf="nombre.touched && !nombre.valid" class="alert alert-danger">
+             *EL dato es requerido
+           </div>
+           <div class="form-group">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos"
+                name="apellidos" ngModel #apellidos="ngModel" required #spy>
+                <div *ngIf="apellidos.touched && !apellidos.valid" class="alert alert-danger">
+                  *EL dato es requerido
+                </div>
+           </div>
+           <div class="form-group">
+                <label for="email">Correo Electronico</label>
+                <input type="email" class="form-control" id="email" name="email" ngModel #email="ngModel" sin-espacios>
+                <div *ngIf="email.touched && email.errors" class="alert alert-danger">
+                  No se permite el ingreso de espacios
+                </div>
+           </div>
+           <div class="form-group">
+                <label for="asunto">Asunto</label>
+                <input type="text" class="form-control" id="asunto"
+                name="asunto" ngModel #asunto="ngModel" required #spy>
+                <div *ngIf="asunto.touched && !asunto.valid" class="alert alert-danger">
+                  *EL dato es requerido
+                </div>
+           </div>
+           <div class="form-group">
+                <label for="msj">Mensaje</label>
+                <input type="textarea" class="form-control" id="msj">
+           </div>
+           <boton-contacto></boton-contacto>
+         </form>
+       </div>
+
+    </div>
+  </div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <div class="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3754.088526867162!2d-90.61852608283668!3d19.793843554312918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85f8332aa946eb63%3A0x180d43f956e4f0ec!2sInstituto+Tecnol%C3%B3gico+de+Campeche!5e0!3m2!1ses!2smx!4v1496280706081" width="500" height="350" frameborder="50" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
